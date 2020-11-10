@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  description: OpenAPI for spire-tokens
+  title: spire-tokens
+  version: 0.0.1
+servers:
+- url: https://api-gateway.vshasta.io/spire-bundle/
+paths:
+  /:
+    get:
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+          description: Spire server information and CA bundle
+      summary: Returns Spire server information and CA bundle
+      tags:
+      - Info
+components:
+  schemas:
+    Info:
+      example:
+        Server: example.server
+        Domain: example.domain
+        CertBundle: ---- SSL CA -----
+      properties:
+        Server:
+          readOnly: true
+          type: string
+        Domain:
+          readOnly: true
+          type: string
+        CertBundle:
+          readOnly: true
+          type: string
