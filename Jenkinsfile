@@ -7,4 +7,5 @@ dockerBuildPipeline {
     name = "spire-bundle"
     description = "Service for serving spire server information and certificate bundle"
         product = "csm"
+    githubPushRepo = "Cray-HPE/spire-servebundle"
 }
