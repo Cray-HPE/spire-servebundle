@@ -11,7 +11,7 @@ RUN ls /build
 RUN ls /usr/local/bin
 
 ########## Runtime ##########
-FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.13.2 AS runtime
+FROM artifactory.algol60.net/docker.io/library/alpine:latest AS runtime
 
 RUN apk add --no-cache bash curl
 

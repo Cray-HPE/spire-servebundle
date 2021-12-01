@@ -22,6 +22,7 @@
 
 NAME ?= spire-bundle
 export VERSION ?= $(shell cat .version)-local
+export WORKSPACE = $(shell pwd)
 export DOCKER_IMAGE ?= ${NAME}:${VERSION}
 
 all: image test
